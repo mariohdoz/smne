@@ -1,0 +1,29 @@
+version: "3"
+
+services: 
+    post-service: 
+        build: ./posts
+        container_name: post_service
+        ports: 
+            - 4000:4000
+    comment-service: 
+        build: ./comments
+        container_name: comment_service
+        ports: 
+            - 4001:4001
+    query-service: 
+        build: ./query
+        container_name: query_service
+        ports: 
+            - 4002:4002
+    moderation-service: 
+        build: ./moderation
+        container_name: moderation_service
+        ports: 
+            - 4003:4003
+    eventbus-service: 
+        build: ./event-bus
+        container_name: eventbus_service
+        ports: 
+            - 4005:4005
+    

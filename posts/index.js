@@ -48,5 +48,6 @@ app.post('/events', (req, res) => {
 });
 
 app.listen(PORT, () => {
+    console.log("Versiòn: 0.0.10");
     console.log(`Escuchando en el puerto ${PORT}`);
 })
