@@ -59,7 +59,7 @@ app.post('/events', (req, res) => {
 app.listen(PORT, async () => {
     console.log(`Escuchando en el puerto ${PORT}`);
 
-    const res = await axios.get('http://localhost:4005/events');
+    const res = await axios.get('http://event-bus-srv:4005/events');
 
     console.log('Procesando eventos');
     res.data.forEach(event => {
